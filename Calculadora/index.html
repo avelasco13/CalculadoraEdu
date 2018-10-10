@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src="js/calculadora.js" charset="utf-8"></script>
-
     <meta charset="utf-8">
     <title>Calculadora Alex</title>
+    <script src="js/calculadora.js" charset="utf-8"></script>
   </head>
   <body>
     <center>
     <h1>Calculadora</h1>
-    <input type="text" name="txt1"><br/>
-    <input type="text" name="txt2">
+    <input type="text" name="txt1" id="1"><br/>
+    <input type="text" name="txt2" id="2">
     <br>
-
+    <p id="parrafoNumeroUno" >
+      El numero uno es :
+    </p>
+    <p id="parrafoOperador" >
+      El operador es :
+    </p>
+    <p id="parrafoNumeroDos" >
+      El numero dos es
+    </p>
+    <p id="parrafoResultado" >
+      El resultado es:
+    </p>
+    <p id="consolaMensajes" >
+      Mensaje al usario:
+    </p>
     <input type="button" onclick="escribir(this.value)" value="7">
     <input type="button" onclick="escribir(this.value)" value="8">
     <input type="button" onclick="escribir(this.value)" value="9">
@@ -26,10 +39,11 @@
     <input type="button" onclick="escribir(this.value)" value="3">
     <input type="button" onclick="arit('-')" value="-"><br/>
     <input type="button" onclick="escribir(this.value)" value="0">
-    <input type="button" onclick="arit('C')" value="C">
+    <input type="button" onclick="escribir(this.value)" value="C">
     <input type="button" onclick="arit('=')" value="=">
     <input type="button" onclick="arit('+')" value="+"><br/>
 
     </center>
+
   </body>
 </html>
