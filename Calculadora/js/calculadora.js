@@ -2,7 +2,8 @@
 
 var txt1 = input.txt1;
 var txt2 = input.txt2;
-var primerNumero;
+var primerNumero = null;
+var segonNumero = null;
 var op = false;
 var operador;
 
@@ -15,25 +16,26 @@ function escribir (n){
 // txt1 = text1 + n;
 //
 // document.getElementById("1").value = "1";
-if (primerNumero == null){
-  primerNumero = n;
-  document.getElementById("parrafoNumeroUno").innerHTML = primerNumero;
-}else if (primerNumero != null && op == false){
+
+
+if (primerNumero != null)
+  {
   primerNumero=primerNumero+n;
-  document.getElementById("parrafoNumeroUno").innerHTML = primerNumero;
-}else if (primerNumero != null && op == true){
 
-}
-
-//controlar longitud maxima 5
-   //Concatenaciona
+  document.getElementById("textinput1").value = primerNumero;
+  }
 
 
-function arit (n){
+  if (segonNumero == null && primerNumero != null && op == true){
+    op = false;
+    segonNumero = n;
+    document.getElementById("parrafoNumeroDos").innerHTML = segonNumero;
+  }
 
-  op = true;
-  operador = n;
-  document.getElementById("parrafoOperador").innerHTML = operador;
-}
+  if (primerNumero == null){ //&& op == false){
+    primerNumero = n;
+    document.getElementById("parrafoNumeroUno").innerHTML = primerNumero;
+  }
+
 
 }
